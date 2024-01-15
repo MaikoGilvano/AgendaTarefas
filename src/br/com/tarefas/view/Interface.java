@@ -201,10 +201,9 @@ public class Interface extends JFrame {
 		btn_adicionar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-
+				limpaCadastro();
 				enableCadastro();
 				disableOperationTarefa();
-
 			}
 		});
 	}
@@ -329,6 +328,11 @@ public class Interface extends JFrame {
 		btn_cancelar.setEnabled(false);
 		tf_tarefa_add.setEnabled(false);
 		tf_data_add.setEnabled(false);
+		tf_tarefa_add.setText("");
+		tf_data_add.setText("");
+	}
+
+	private void limpaCadastro(){
 		tf_tarefa_add.setText("");
 		tf_data_add.setText("");
 	}
